@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  typescript-express-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports: 
+      - 5000:5000
+    volumes:
+      - ./:/usr/app/
+    command: npm run dev
